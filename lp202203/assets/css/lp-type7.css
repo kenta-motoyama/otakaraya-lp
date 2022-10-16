@@ -287,6 +287,7 @@ layout
 
     .container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail .kuchikomi-list_txt p {
         font-size: .8rem;
+        line-height: 1;
     }
 }
 
@@ -378,6 +379,7 @@ layout
     font-size: 4rem;
     color: #FF0000;
     font-weight: 600;
+    transform: scale(0.9, 1);
     text-align: center;
     margin-left: 4rem;
 }
@@ -399,17 +401,190 @@ layout
     color: #FF0000;
 }
 
+.container-lp7.jisseki-list {
+    margin: 10% auto;
+}
+
+.container-lp7 .gojitaku-wrap {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.container-lp7 .gojitaku-wrap .gojitaku-inner {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin-bottom: 20%;
+}
+
+.container-lp7 .gojitaku-wrap .gojitaku-inner>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.container-lp7 .gojitaku-inner h3 {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.container-lp7 .gojitaku-inner p {
+    position: absolute;
+    top: 4rem;
+    font-size: 1.6rem;
+    transform: scale(0.7, 1);
+    font-weight: 600;
+    color: #B40000;
+    margin-left: 0.6rem;
+}
+
+.container-lp7 .gojitaku-inner p::before {
+    content: '';
+    position: absolute;
+    top: .7rem;
+    left: -1.6rem;
+    background: url(../img/lp07/zisseki_ttlbefore.png)no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    z-index: 1;
+}
+
+.container-lp7 .gojitaku-inner p>.zisseki-yenS {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FF0000;
+}
+
 @media screen and (max-width:460px) {
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner {
+        width: 60%;
+        padding: 1%;
+    }
+
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner p {
+        font-size: 1rem;
+    }
+
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner .zisseki-hikaku>dt {
+        font-size: 1.4rem;
+    }
+
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner .zisseki-hikaku>dd {
+        font-size: 1.6rem;
+    }
+
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner::after {
+        background-size: contain;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 51.5px;
+        height: 22px;
+    }
 
     .container-lp7 .zisseki-wrap .zisseki-wrap_img {
+        width: 40%;
         position: relative;
     }
 
     .container-lp7 .zisseki-wrap .zisseki-wrap_img img {
-        width: 80%;
-        position: absolute;
+        width: 100%;
+        position: relative;
+        top: 30%;
         right: -2rem;
     }
 
+    .container-lp7 .zisseki-reason {
+        height: auto;
+        top: 3rem;
+    }
 
+    .container-lp7 .zisseki-reason h2 {
+        font-size: 1.2rem;
+    }
+
+    .container-lp7 .zisseki-reason p {
+        font-size: 3.2rem;
+        margin-left: 4rem;
+    }
+
+    .container-lp7 .zisseki-reason p::before {
+        background-size: contain;
+        top: 22px;
+        left: -40px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .container-lp7.jisseki {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .container-lp7 .zisseki-reason p {
+        font-size: 3rem;
+    }
+
+    .container-lp7 .gojitaku-inner p {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width:767px) {
+    .container-lp7 .gojitaku-inner p {
+        top: 2rem;
+        font-size: 2.4rem;
+        margin-left: 2rem;
+    }
+
+    .container-lp7 .gojitaku-inner p::before {
+        top: 1.2rem;
+        left: -3rem;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* omakase */
+.container-lp7.omakase {
+    position: relative;
+    width: 100%;
+    background: url(../img/lp07/bg-omakase.png) repeat-y;
+    background-size: cover;
+    padding: 1%;
+    z-index: -1;
+}
+
+.container-lp7 .omakase-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    z-index: 0;
+}
+
+.container-lp7 .omakase-wrap .omakase-inner {
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    padding: .5rem;
+    z-index: 1;
+}
+
+.container-lp7 .omakase-wrap .omakase-inner>figcaption {
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    color: #B40000;
+    text-shadow: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    z-index: 2;
 }

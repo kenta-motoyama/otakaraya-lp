@@ -125,8 +125,196 @@ get_header('lp7');
       <h2><span class="zisseli-redTxt">おたからや</span>なら、こんなに<span class="zisseli-redTxt">高い！</span></h2>
       <p>0,000,000<span class="zisseki-yen">円</span></p>
     </div>
+    </div>
+
+    <div class="container-lp7 jisseki">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_point2.png" alt="1品でも高価買取">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki-item02.png" alt="買取アイテム1">
+    <div class="zisseki-wrap">
+    <div class="zisseki-wrap_inner">
+      <h2>買取比較例</h2>
+      <p>ダイヤ付きブローチ</p>
+      <dl class="zisseki-hikaku">
+        <dt>A社</dt>
+        <dd>0,000,000円</dd>
+      </dl>
+      <dl class="zisseki-hikaku">
+        <dt>B社</dt>
+        <dd>0,000,000円</dd>
+      </dl>
+    </div>
+    <div class="zisseki-wrap_img">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_catch.png" alt="他社圧倒">
+    </div>
+    </div>
+    <div class="zisseki-reason">
+      <h2><span class="zisseli-redTxt">おたからや</span>なら、こんなに<span class="zisseli-redTxt">高い！</span></h2>
+      <p>0,000,000<span class="zisseki-yen">円</span></p>
+    </div>
+    </div>
+
+    <div class="container-lp7 jisseki-list">
+      <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki-ttl02.png" alt="このようなものご自宅で眠らせていませんか"></h2>
+    <div class="gojitaku-wrap">
+      <!-- 1段目 -->
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku01.png" alt="祖母が使っていたアクセサリー類">
+      <div>
+        <h3>祖母が使っていたアクセサリー類</h3>
+        <p>1,684,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku02.png" alt="実家の整理で出てきた">
+      <div>
+        <h3>実家の整理で出てきた金やプラチナのアクセサリー</h3>
+        <p>5,126,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku03.png" alt="趣味で集めた金貨">
+      <div>
+        <h3>昔、趣味で集めていた金貨</h3>
+        <p>9,820,400<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+    <!-- 2段目 -->
+    <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku01.png" alt="祖母が使っていたアクセサリー類">
+      <div>
+        <h3>祖母が使っていたアクセサリー類</h3>
+        <p>1,684,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku02.png" alt="実家の整理で出てきた">
+      <div>
+        <h3>実家の整理で出てきた金やプラチナのアクセサリー</h3>
+        <p>5,126,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku03.png" alt="趣味で集めた金貨">
+      <div>
+        <h3>昔、趣味で集めていた金貨</h3>
+        <p>9,820,400<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+    <!-- 3段目 -->
+    <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku01.png" alt="祖母が使っていたアクセサリー類">
+      <div>
+        <h3>祖母が使っていたアクセサリー類</h3>
+        <p>1,684,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku02.png" alt="実家の整理で出てきた">
+      <div>
+        <h3>実家の整理で出てきた金やプラチナのアクセサリー</h3>
+        <p>5,126,800<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
+
+      <div class="gojitaku-inner"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseski-gojitaku03.png" alt="趣味で集めた金貨">
+      <div>
+        <h3>昔、趣味で集めていた金貨</h3>
+        <p>9,820,400<span class="zisseki-yenS">円</span></p>
+      </div>
+    </div>
 
     </div>
+    </div>
+    <div class="container-lp7">
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_btn.webp" alt="詳しく見る"></a>
+    </div>
+    <div class="container-lp7">
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/bnr-nayami.webp" alt="悩んでいませんか"></a>
+    </div>
+    <div class="container-lp7 omakase">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/ttl-omakaswe.png" alt="どのようなお品物もお任せください">
+    <div class="omakase-wrap">
+      <!-- 1段目 -->
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+    <!-- 2段目 -->
+    <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+    <!-- 3段目 -->
+    <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+    <!-- 4段目 -->
+    <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+    <!-- 5段目 -->
+    <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+    <!-- 6段目 -->
+    <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+      </figure>
+      <figure class="omakase-inner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/omakase-item01.png" alt="インゴット">
+      <figcaption>インゴット</figcaption>
+    </figure>
+
+    </div>
+
+    </div>
+
+
+
+
   </article>
 </main>
 <?php get_footer(); ?>
