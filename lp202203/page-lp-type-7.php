@@ -93,7 +93,9 @@ get_header('lp7');
     ?>
     <?php foreach($arr as $data): ?>
       <div>
-        <?php echo $data; ?>
+        <?php
+        var_dump($data)
+        ?>
       </div>
       <?php endforeach ?>
       <div class="container-lp7">
