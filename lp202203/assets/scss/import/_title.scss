@@ -1,0 +1,50 @@
+/* title */
+
+.otkr-ttl {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    @include mq() {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    h2{
+        font-size: 38px;
+        letter-spacing: 0.5rem;
+        position: relative;
+        line-height: 1;
+        display: block;
+        padding: 0 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: $colorOrange;
+        font-feature-settings: "palt";
+        @include mq() {
+            @include fz_vw(21, 375);
+            margin-bottom: 10px;
+            letter-spacing: 0.2rem;
+        }
+    }
+    p{
+        font-size: 16px;
+        letter-spacing: 0.3rem;
+        @include mq() {
+            font-size: 14px;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+
+.otkr-sabttl{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    @include mq() {
+        @include fz_vw(16, 375);
+        margin-bottom: 10px;
+    }
+}
+
+
+

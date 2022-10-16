@@ -1,0 +1,135 @@
+@charset "utf-8";
+// ====================================================
+// mixin  フォントサイズ：VW 幅1200とき　フォントサイズ12pxにしたい時　@include fz_vw(12,1200);
+// ====================================================
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport: 1200) {
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10, $viewport: 1200) {
+    font-size: $font_size * 1px;
+    // font-size: max(get_vw($font_size, $viewport),$font_size) * 1px;
+}
+
+// breakpoint----------*
+// $breakpoint-sm: 400px !default;
+// $breakpoint-md: 768px !default;
+// $breakpoint-lg: 1000px !default;
+$breakpoints: ( "xs": "screen and (max-width: 320px)", "sm": "screen and (max-width: 449px)", "md": "screen and (max-width: 768px)", "lg": "screen and (max-width: 950px)", "xl": "screen and (max-width: 1360px)", ) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin responsive($class, $bp: $breakpoint-up) {
+    #{$class} {
+        @content;
+    }
+    @each $suffix,
+    $value in $bp {
+        @media #{$value} {
+            #{$class}-#{$suffix} {
+                @content;
+            }
+        }
+    }
+}
+
+// 矢印系
+@mixin arrow-r {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $colorBlack;
+    border-right: 2px solid $colorBlack;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@mixin arrow-r-wh {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $colorWhite;
+    border-right: 2px solid $colorWhite;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@mixin arrow-l {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $colorBlack;
+    border-left: 2px solid $colorBlack;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@mixin arrow-l-wh {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $colorWhite;
+    border-left: 2px solid $colorWhite;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@mixin arrow-b {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $colorBlack;
+    border-right: 2px solid $colorBlack;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@mixin arrow-b-wh {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $colorWhite;
+    border-right: 2px solid $colorWhite;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    @include mq(sm) {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+// グラデーション
+@mixin bg-gradient-h($angle: 180deg, $color: #0bd, $amount: 20%) {
+    background: linear-gradient($angle, $colorOrange, $colorBlue);
+}
+
+@mixin bg-gradient-w($angle: 90deg, $color: #0bd, $amount: 20%) {
+    background: linear-gradient($angle, $colorOrange, $colorBlue);
+}
+
+@mixin bg-gradient-w-rev($angle: -90deg, $color: #0bd, $amount: 20%) {
+    background: linear-gradient($angle, $colorOrange, $colorBlue);
+}
+
+@mixin bg-gradientTransparent($angle: 180deg, $color: #0bd) {
+    background: linear-gradient($angle, $color, rgba(255, 255, 255, 0));
+}

@@ -1,0 +1,98 @@
+/* list */
+.ktb-list{
+  li{
+    padding-bottom:20px;
+    border-bottom:solid 1px $colorLiteGray;
+    margin-bottom:20px;
+    a{
+      display: block;
+    }
+    time{
+      font-size:20px;
+    }
+    p{
+      font-size:14px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &.new{
+      time{
+        position: relative;
+        &:after{
+          content:"NEW!";
+          color:$colorRed;
+          font-family: fieldwork, sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          display: inline-block;
+          margin-left: 0.75rem;
+          font-size:0.75rem;
+        }
+      }
+    }
+  }
+}
+.label-cat{
+  background-color: $colorWaterBlue;
+  color:$colorWhite;
+  display: inline-block;
+  width: 7em;
+  text-align: center;
+  line-height: 1;
+  font-size: 15px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+
+}
+
+
+
+
+
+
+/*================================
+動画
+================================*/
+
+.otkr-movie--list{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  &Item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+    max-width: calc(33.333% - 30px);
+    // padding: 10px;
+    // background-color: $colorWhite;
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+    .caption{
+      margin-top: 10px;
+      h4{
+        font-size: 11px;
+        color: $colorBlack;
+      }
+      time{
+        font-size: 12px;
+        background: $colorMain;
+        color: $colorWhite;
+        padding: 2px 5px;
+      }
+    }
+    @include mq() {
+      max-width: calc(50% - 20px);
+      margin-right: 20px;
+      margin-bottom: 20px;
+      &:nth-child(3n){
+        margin-right: 20px;
+      }
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+  }
+}

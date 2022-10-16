@@ -1,0 +1,705 @@
+
+
+.otkr-header {
+    // background-color: rgba(0, 75, 151, 0.95);
+    // box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    // position: fixed;
+    // top: 0;
+    // z-index: 30;
+    // width: 100%;
+    
+    
+    &--content{
+        // display: flex;
+        // align-items: center;
+        // padding: 0 20px;
+        // position: relative;
+        // z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 50px;
+        max-width: 1100px;
+        margin: auto;
+        @media screen and (max-width: 1100px) {
+            padding: 0;
+        }
+        .otkr-header--sitename{
+            h1{
+                font-size: 20px;
+                img{
+                    width: 134px;
+                }
+                // @include mq() {
+                //     height: 55px;
+                // }
+                span{
+                    display: inline-block;
+                }
+            }
+            @include mq() {
+                padding: 10px;
+            }
+        }
+        .otkr-header--coupon{
+            margin:0 auto;
+            @include mq() {
+                margin:0 0 0 auto;
+            }
+            img{
+                max-width: 169px;
+                transform: translateX(4px);
+            }
+        }
+
+        .otkr-header--tel{
+            margin: 0 20px;
+            .text_l{
+                font-size: 20px;
+                position: relative;
+                padding-right: 20px;
+                font-weight: bold;
+                display: inline-block;
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/ico_arrow_tel.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: (36px/2);
+                    height: (30px/2);
+                    position: absolute;
+                    top:50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+            .text_s{
+                font-size: 12px;
+                font-feature-settings: "palt";
+            }
+            .tel_link{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                &Icon{
+                    text-align: center;
+                    width: 45px;
+                    margin-right: 10px;
+                    line-height: 0;
+                    span{
+                        font-size: 9px;
+                        line-height: 1;
+                        margin-bottom: 2px;
+                        display: inline-block;
+                    }
+                }
+                &Text{
+                    font-weight: bold;
+                    font-size: 40px;
+                    line-height: 1;
+                }
+            }
+        }
+        .otkr-header--purchase{
+            max-width: 268px;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                li{
+                    width: 50%;
+                    padding: 5px;
+                    a{
+                        display: inline-block;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        &:hover{
+                            img{
+                                position: relative;
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*=========================
+    nav(PC)
+    =========================*/
+    .otkr-nav-pc{
+
+            // &.otkr-header--inner{
+            //     display: flex !important;
+            //     align-items: center;
+            //     justify-content: flex-start;
+            //     // max-width: 1200px;
+            //     margin: 10px auto;
+            //     // padding: 0 20px;
+            //     padding: 0 50px;
+            //     position: relative;
+            //     @media screen and (max-width: 1100px) {
+            //         display: none !important;
+            //     }
+            // }
+            .otkr-header--menu{
+                background-color: $colorMain;
+                .otkr-header--nav{
+                    color: $colorWhite;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 10px 0;
+                        li{
+                            border-right: 1px solid $colorWhite;
+                            flex-grow: 1;
+                            text-align: center;
+                            position: relative;
+                            &:last-child{
+                                border-right: 0;
+                            }
+                            a{
+                                padding: 0 5px 5px;
+                                color: $colorWhite;
+                                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 60px;
+                                font-size: 16px;
+                                line-height: 1.2;
+                                &::after{
+                                    content: "";
+                                    transition: all 0.3s;
+                                    display: inline-block;
+                                    background-image: url("../img/ico_arrow_nav.png");
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    width: (28px/2);
+                                    height: (16px/2);
+                                    position: absolute;
+                                    bottom:0;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                }
+                                &:hover{
+                                    &::after{
+                                        bottom: -3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            
+
+    }/*otkr-pc end*/
+
+    /*=========================
+    nav(SP)
+    =========================*/
+    .otkr-nav-sp{
+
+            
+ 
+
+        #otkr-nav{
+            /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+            position:fixed;
+            z-index: 999;
+            /*ナビのスタート位置と形状*/
+            top:-120%;
+            // right: -120%;
+            width:100%;
+            height: 100vh;
+            background:$colorMain;
+            /*動き*/
+            transition: all 0.6s;
+            overflow: hidden;
+        
+            &.panelactive{
+                top: 0;
+                #otkr-nav-list{
+                    /*ナビの数が増えた場合縦スクロール*/
+                    position: fixed;
+                    z-index: 999; 
+                    width: 100%;
+                    height: 100vh;
+                    overflow: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+            }
+            #otkr-nav-list {
+                .menutext{
+                    color: $colorWhite;
+                    text-align: center;
+                    padding: 10px;
+                    p{
+                        font-size: 24px;
+                    }
+                }
+                .otkr-nav-list-ul{
+                    max-width: 80%;
+                    margin: 30px auto;
+                }
+                .otkr-nav-purchase{
+                    margin-bottom: 20px;
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        li{
+                            width: 50%;
+                            margin-right: 10px;
+                            text-align: center;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                            a{
+                                background-color: $colorWhite;
+                                color: $colorMain;
+                                display: block;
+                                padding: 15px 0;
+                                font-weight: bold;
+                                font-size: 18px;
+                                &.ico_car{
+                                    position: relative;
+                                    &::before{
+                                        content: "";
+                                        display: inline-block;
+                                        background-image: url("../img/ico_car_r.png");
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        width: (36px/2);
+                                        height: (32px/2);
+                                        margin-right: 10px;
+                                    }
+                                }
+                                &.ico_shop{
+                                    position: relative;
+                                    &::before{
+                                        content: "";
+                                        display: inline-block;
+                                        background-image: url("../img/ico_shop_r.png");
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        width: (36px/2);
+                                        height: (32px/2);
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .otkr-menu{
+                    transition: all 0.3s;
+                    li{
+                        list-style: none;
+                        text-align: left;
+                        border-bottom: solid 1px $colorWhite;
+                        a{
+                            color: $colorWhite;
+                            text-decoration: none;
+                            padding: 15px 0;
+                            display: block;
+                            text-transform: uppercase;
+                            letter-spacing: 0.2em;
+                            position: relative;
+
+                            br {
+                                display: none;
+                            }
+                            &::after{
+                                content: "";
+                                transition: all 0.3s;
+                                display: inline-block;
+                                background-image: url("../img/ico_arrow_nav_sp.png");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: 11px;
+                                height: 18px;
+                                position: absolute;
+                                top:50%;
+                                right: 5px;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                    }
+                }
+                .otkr-close{
+                    text-align: center;
+                    a{
+                        display: block;
+                        max-width: 40%;
+                        margin: auto;
+                        background-color: $colorWhite;
+                        color: $colorMain;
+                        position: relative;
+                        line-height: 2;
+                        padding: 5px;
+                        font-size: 15px;
+                        margin-top: 30px;
+                        font-weight: bold;
+                        &::after{
+                            content: "×";
+                            display: inline-block;
+                            line-height: 0.8;
+                            color: $colorMain;
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        /* ボタンのためのCSS ===============*/
+        .otkr-header--menu{
+            position:relative;
+            z-index: 9999;
+            top:0;
+            right: 0;
+            cursor: pointer;
+            width: 60px;
+            height:60px;
+            background-color: $colorMain;
+            margin-left: 20px;
+            span{
+                display: inline-block;
+                transition: all .4s;
+                position: absolute;
+                left: 50%;
+                height: 3px;
+                background-color: $colorWhite;
+                width: 60%;
+                transform: translate(-50%, 0);
+                &:nth-of-type(1) {
+                    top:15px; 
+                }
+                &:nth-of-type(2) {
+                    top:23px;
+                }
+                &:nth-of-type(3) {
+                    top:31px;
+                }
+                &.text{
+                    background-color: transparent;
+                    width: 50px;
+                    color: $colorWhite;
+                    top:35px;
+                    text-align: center;
+                    &::after{
+                        content: "メニュー";
+                        display: block;
+                        font-size: 10px;
+                    }
+                }
+            }
+            &.active {
+                span{
+                    &:nth-of-type(1) {
+                        top: 18px;
+                        left: 18px;
+                        transform: translateY(6px) rotate(-45deg);
+                        width: 40%;
+                    }
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+                    &:nth-of-type(3){
+                        top: 30px;
+                        left: 18px;
+                        transform: translateY(-6px) rotate(45deg);
+                        width: 40%;
+                    }
+                    &.text{
+                        &::after{
+                            content: "とじる";
+                        }
+                    }
+                }
+            }
+        }
+        /* /ボタンのためのCSS ===============*/
+
+
+        .otkr-header--purchase{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 1px auto;
+                li{
+                    width: 50%;
+                    margin-right:1px;
+                    text-align: center;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    a{
+                        background-color: $colorMain;
+                        color: $colorWhite;
+                        display: block;
+                        padding: 15px 0;
+                        font-weight: bold;
+                        font-size: 23px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            display: inline-block;
+                            background-image: url("../img/ico_arrow_bottom.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: (30px/1.8);
+                            height: (30px/1.8);
+                            margin-left: 10px;
+                        }
+                        &.ico_car{
+                            background-color: $colorRed;
+                            &::before{
+                                content: "";
+                                display: inline-block;
+                                background-image: url("../img/ico_car.png");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: (36px/1.8);
+                                height: (32px/1.8);
+                                margin-right: 10px;
+                            }
+                        }
+                        &.ico_shop{
+                            &::before{
+                                content: "";
+                                display: inline-block;
+                                background-image: url("../img/ico_shop.png");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: (36px/1.8);
+                                height: (32px/1.8);
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+
+    
+
+
+
+    /*=========================
+    コロナ
+    =========================*/
+    .otkr-header--covid{
+        text-align: center;
+        transition: height 0.5s;
+        overflow: hidden;
+        @include mq() {
+            height: 25px;
+        }
+
+        a{
+            background-color: #00a7cc;
+            color: $colorWhite;
+            padding: 2px 5px;
+            display: block;
+            p{
+                font-size: 18px;
+                transition: all 0.3s;
+                display: inline-block;
+                position: relative;
+                padding-right: 15px;
+                line-height: 1;
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/ico_arrow_right.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 11px;
+                    height: 18px;
+                    position: absolute;
+                    top:50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+            &:hover{
+                p{
+                    &::after{
+                        right: -3px;
+                    }
+                }
+            }
+        }
+        @include mq() {
+            a{
+                padding: 2px;
+                p{
+                    font-size: 15px;
+                    font-size: 3.5vw;
+                    padding-right: 20px;
+                    &::after{
+                        width: (11px/1.5);
+                        height: (18px/1.5);
+                    }
+                }
+            }
+        }
+        /*mq end*/
+    }
+
+
+    /*=========================
+    ウクライナ
+    =========================*/
+    .otkr-header--ukraine{
+        text-align: center;
+        transition: height 0.5s;
+        overflow: hidden;
+        @include mq() {
+            height: 25px;
+        }
+
+        a{
+            background-color: #363a90;
+            color: $colorWhite;
+            padding: 2px 5px;
+            display: block;
+            p{
+                font-size: 18px;
+                transition: all 0.3s;
+                display: inline-block;
+                position: relative;
+                padding-right: 15px;
+                line-height: 1;
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/ico_arrow_right.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 11px;
+                    height: 18px;
+                    position: absolute;
+                    top:50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+            &:hover{
+                p{
+                    &::after{
+                        right: -3px;
+                    }
+                }
+            }
+        }
+        @include mq() {
+            a{
+                padding: 2px;
+                p{
+                    font-size: 15px;
+                    font-size: 3.5vw;
+                    padding-right: 20px;
+                    &::after{
+                        width: (11px/1.5);
+                        height: (18px/1.5);
+                    }
+                }
+            }
+        }
+        /*mq end*/
+    }
+
+    
+
+}
+
+.otkr-content{
+    // transition: all 0.5s;
+}
+@include mq() {
+.spheader-fixed{
+
+    .otkr-header{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 101;
+
+        .otkr-nav-sp .otkr-header--menu{
+            height: 50px;
+        }
+        .otkr-nav-sp .otkr-header--purchase ul li a{
+            padding:0px 0;
+        }
+        .otkr-nav-sp .otkr-header--menu span:nth-of-type(1){
+            top:10px;
+        }
+        .otkr-nav-sp .otkr-header--menu span:nth-of-type(2){
+            top:18px;
+        }
+        .otkr-nav-sp .otkr-header--menu span:nth-of-type(3){
+            top:26px;
+        }
+        .otkr-nav-sp .otkr-header--menu span.text{
+            top:30px;
+        }
+
+        .otkr-nav-sp .otkr-header--menu.active span:nth-of-type(1){
+            top:13px;
+            left:15px;
+        }
+
+        .otkr-nav-sp .otkr-header--menu.active span:nth-of-type(2){
+            top:13px;
+        }
+        .otkr-nav-sp .otkr-header--menu.active span:nth-of-type(3){
+            top:25px;
+            left:15px;
+        }
+
+    }
+    .otkr-header--ukraine{
+        height: 0;
+        overflow: hidden;
+    }
+    .otkr-header--covid{
+        height: 0;
+        overflow: hidden;
+    }
+    .otkr-content{
+        padding-top: 98px;
+        margin-top: 98px;
+    }
+}
+}

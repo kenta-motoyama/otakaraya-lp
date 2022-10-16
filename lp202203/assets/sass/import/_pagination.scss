@@ -1,0 +1,121 @@
+.otkr-pagenation {
+    li {
+        width: 50px;
+        height: 50px;
+        border-radius: 100vw;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        @include mq(sm) {
+            font-size: 14px;
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            display: block;
+            // @include bg-gradient-w;
+            transition: 0.5s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            display: block;
+            // @include bg-gradient-w-rev;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        // &.otkr-pagenation-back,
+        // &.otkr-pagenation-next {
+        //     a {
+        //         width: 30px;
+        //         height: 30px;
+        //         border-radius: 100vw;
+        //         background: $colorWhite;
+        //         position: relative;
+        //         display: inline-block;
+        //         @include mq(sm) {
+        //             width: 24px;
+        //             height: 24px;
+        //         }
+        //         &:after {
+        //             content: "";
+        //             @include arrow-r;
+        //             position: absolute;
+        //             right: 0;
+        //             left: 0;
+        //             top: 50%;
+        //             bottom: 50%;
+        //             margin: auto;
+        //             z-index: 1;
+        //         }
+        //     }
+        // }
+        // &.otkr-pagenation-next {}
+        // &.otkr-pagenation-back {
+        //     a:after {
+        //         -webkit-transform: rotate(-135deg);
+        //         transform: rotate(-135deg);
+        //     }
+        // }
+        &.otkr-pagenation-list {
+            width: auto;
+            a {
+                position: relative;
+                padding: 0 34px;
+            }
+            &:before {
+                width: 100%;
+            }
+            &:after {
+                width: 100%;
+            }
+        }
+        a,
+        p {
+            display: inline-block;
+            font-size: 20px;
+            height: 100%;
+            width: 100%;
+            line-height: 2.5;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 50%;
+            margin: auto;
+            transform: translateY(-50%);
+            text-align: center;
+            z-index: 2;
+            @include mq(sm) {
+                font-size: 14px;
+                line-height: 3;
+            }
+        }
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.page-current {
+    cursor: default;
+    pointer-events: none;
+}

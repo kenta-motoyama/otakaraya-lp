@@ -1,0 +1,2378 @@
+
+
+
+/*================================
+content
+================================*/
+.display-pc{
+    display: block;
+    @include mq() {
+        display: none;
+    }
+}
+.display-sp{
+    display: none;
+    @include mq() {
+        display: block;
+    }
+}
+
+
+
+/*================================
+kv
+================================*/
+.otkr-kv{
+    background-image: url("../img/bg_kv.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .otkr-cmn-inner{
+        @include mq() {
+            padding: 0;
+        }
+    }
+}
+
+
+.otkr-cp{
+    .row{
+        li{
+            padding: 0 20px;
+            @include mq() {
+                padding: 0;
+                &:first-child{
+                    width: calc(50% - 10px);
+                    margin-right: 10px;
+               }
+            }
+        }
+    }
+}
+
+
+.otkr-soaring{
+    .table_bg--gray {
+        @include mq() {
+            margin:0 -20px;
+            width:calc(100% + 40px);
+        }
+    }
+}
+
+
+/*2点以上で10%up!=========================*/
+.otkr-latest--up{
+    display: flex;
+    align-items: center;
+    @include mq() {
+        display: block;
+    }
+    &Left{
+        width: 50%;
+        margin-right: 20px;
+        ul{
+            display: flex;
+            li{
+                width: 33.3333%;
+                padding: 10px;
+                position: relative;
+                text-align: center;
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    width: 104px;
+                    height: 104px;
+                    position: absolute;
+                    top: 15px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background-color: $colorLiteOrange;
+                    border-radius: 100px;
+                }
+                img{
+                    height: 110px;
+                    width: auto;
+                    position: relative;
+                    z-index: 1;
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                p{
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    span{
+                        font-size: 20px;
+                        display: block;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        @include mq() {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            ul{
+                justify-content: center;
+                width: 80%;
+                max-width: 380px;
+                margin: auto;
+                li{
+                    width: 33.3333%;
+                    padding: 5px;
+                    &::after{
+                        width: (149px/2);
+                        height:  (149px/2);
+                        top: 10px;
+                    }
+                    img{
+                        height: (158px/2);
+                        width: auto;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    p{
+                        margin-top: 10px;
+                        font-size: 2vw;
+                        span{
+                            font-size: 3vw;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &Right{
+        width: 50%;
+        
+        .upRight1{
+            background-color: $colorLiteOrange;
+            margin-bottom: 40px;
+            padding: 5px 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &::after{
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 18px solid transparent;
+                border-right: 18px solid transparent;
+                border-top: 16px solid black;
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            p{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .text1{
+                padding-right: 25px;
+                position: relative;
+                @include mq() {
+                    font-size: 4vw;
+                }
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/ico_arrow_latestup_1.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: (26px/3);
+                    height: (42px/3);
+                    position: absolute;
+                    top: 50%;
+                    right: 8px;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+        .upRight2{
+            background-color: $colorOrange;
+            color: $colorWhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            .text1{
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 1;
+                padding-right: 30px;
+                position: relative;
+                white-space: nowrap;
+                span{
+                    color: $colorYellow;
+                }
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/ico_arrow_latestup_2.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: (26px/2);
+                    height: (42px/2);
+                    position: absolute;
+                    top: 50%;
+                    right: 2px;
+                    transform: translate(0, -50%);
+                }
+                @include mq() {
+                    font-size: 5.2vw;
+                }
+
+            }
+            .text2{
+                font-weight: bold;
+                font-size: 30px;
+                white-space: nowrap;
+                @include mq() {
+                    font-size: 6vw;
+                }
+        
+            }
+        }
+        @include mq() {
+            width: 100%;
+        }
+    }
+}
+
+
+/*2点以上で10%up! end=========================*/
+
+
+/*どんな状態でも高価買取=========================*/
+.otkr-koukakaitori{
+    .row{
+        justify-content: center;
+        // max-width: 540px;
+        margin: 40px auto 0;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        &.otkr-koukakaitori-count1,
+        &.otkr-koukakaitori-count2,
+        &.otkr-koukakaitori-count3,
+        &.otkr-koukakaitori-count4,
+        &.otkr-koukakaitori-count5,
+        &.otkr-koukakaitori-count6{
+            max-width: 540px;
+        }
+        li{
+            // width: 33.3333%;
+            width: 150px;
+            figure{
+                padding: 0px;
+                text-align: center;
+                figcaption{
+                    font-size: 13px;
+                    color: $colorBlack;
+                    line-height: 1.3;
+                    // white-space: nowrap;
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+            }
+        }
+        @include mq() {
+            justify-content: center;
+            max-width: 540px;
+            margin: 30px auto 0;
+            li{
+                width: 30%;
+                figure{
+                    padding: 0 0px 0 0;
+                    figcaption{
+                        font-size: 12px;
+                        line-height: 1;
+                    }
+                }
+                &:last-child{
+                    figure{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        /*mq*/
+    }
+}
+/*どんな状態でも高価買取 end=========================*/
+
+
+
+
+/*どんな状態でも高価買取=========================*/
+.otkr-comment{
+    &--inner{
+        h3{
+            max-width: 382px;
+            margin: auto;
+        }
+        .otkr-comment--logo{
+            max-width: 550px;
+            margin: 10px auto;
+            li{
+                width: 50%;
+                padding: 10px;
+            }
+        }
+        .otkr-comment--kuchikomi{
+            margin-top: 20px;
+            ul{
+                align-items: stretch;
+                gap:30px;
+                li{
+                    width: calc(33.3333% - 20px);
+                    // margin-right: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    
+                    .otkr-comment--kuchikomiHed{
+                        background-color: $colorMain;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px;
+                        span{
+                            display: inline-block;
+                            color: $colorWhite;
+                            font-size: 12px;
+                        }
+                    }
+                    .otkr-comment--kuchikomiText{
+                        border: solid 2px $colorMain;
+                        padding: 20px;
+                        flex:1;
+                        // height: 190px;
+                        h4{
+                            height: 35px;
+                            font-size: 14px;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        p{
+                            margin-top: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                @include mq() {
+                        display: block;
+                        li{
+                            width: 100%;
+                            margin-top: 20px;
+                            .otkr-comment--kuchikomiText{
+                                height: auto;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
+
+/*どんな状態でも高価買取 end=========================*/
+
+
+
+/*メディア情報多数=========================*/
+.otkr-media{
+    &--inner{
+        background-color: $colorLiteOrange;
+        display: table;
+        .otkr-media--logo{
+            width: calc(70% - 10px);
+            padding: 0px 40px 100px;
+            margin-right: 10px;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            .otkr-media--logoimg{
+                
+            }
+            .otkr-media--coroke{
+                max-width: 371px;
+                position: absolute;
+                bottom:0;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 200%;
+            }
+        }
+        .otkr-media--thumb{
+            border-left: 10px solid $colorWhite;
+            display: table-cell;
+            width: 30%;
+            div{
+                border-bottom: 10px solid $colorWhite;
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+        @include mq() {
+            display: block;
+            .otkr-media--logo{
+                width: auto;
+                padding: 20px 40px 100px;
+                margin-right: 0;
+                display: inline-block;
+                vertical-align: middle;
+                .otkr-media--coroke{
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            .otkr-media--thumb{
+                border-left: none;
+                border-top: 50px solid $colorWhite;
+                display: flex;
+                width: 100%;
+                div{
+                    border-right: 5px solid $colorWhite;
+                    border-bottom: 0;
+                    width: 50%;
+                    &:last-child{
+                        width: 50%;
+                        border-left: 5px solid $colorWhite;
+                        border-right: 0;
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+        /*mq*/
+
+    }
+}
+/*メディア情報多数 end=========================*/
+
+
+
+/*売却時に必要なもの=========================*/
+.otkr-document{
+    &--inner{
+        background-color: $colorLiteOrange;
+        position: relative;
+        margin-top: 100px;
+        @include mq(){
+            margin-top: 30px;
+        }
+        h3{
+            background-color: $colorMain;
+            color: $colorWhite;
+            padding: 20px 0;
+            max-width: 550px;
+            width: 100%;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 30px;
+            text-align: center;
+            .small{
+                display: block;
+                font-weight: normal;
+                font-size: 20px;
+            }
+            @include mq(){
+                position: static;
+                transform: translate(0,-30px);
+                width: 80%;
+                margin: 0 auto -30px;
+            }
+        }
+        ul{
+            max-width: 60%;
+            margin: auto;
+            padding: 80px 0 30px;
+            li{
+                display: inline-block;
+                margin-right: 20px;
+                font-size: 18px;
+                line-height: 2;
+            }
+        }
+        @include mq() {
+            h3{
+                width: 80%;
+                font-size: 5vw;
+                padding: 15px 0;
+                span{
+                    font-size: 3vw;
+                    margin-top: 5px;
+                }
+            }
+            ul{
+                max-width: 100%;
+                margin: auto;
+                padding: 3.2rem 20px 20px;
+            }
+        }
+        @include mq(sm) {
+            ul{
+                padding: 1.8rem 20px 20px;
+                li{
+                    font-size: 3vw;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    .f-notes{
+        padding: 50px 50px 0;
+        @include mq() {
+            padding: 20px 0 0;
+        }
+    }
+}
+/*売却時に必要なもの end=========================*/
+
+
+
+
+/*万全の体制=========================*/
+.otkr-system{
+    &--inner{
+        ul{
+            li{
+                width: calc(33.3333% - 34px);
+                margin-right: 50px;
+                text-align: center;
+                &:last-child{
+                    margin-right: 0;
+                }
+                .number{
+                    color: $colorOrange;
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+                h3{
+                    font-size: 20px;
+                    display: inline-block;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                .img{
+                    margin-top: 20px;
+                }
+                .text{
+                    margin-top: 20px;
+                    text-align: left;
+                    line-height: 2rem;
+                    font-size: 14px;
+                }
+                
+            }
+        }
+        @include mq() {
+            ul{
+                display: block;
+                li{
+                    width: auto;
+                    margin-right: 0;
+                    .number{
+                        color: $colorOrange;
+                        text-align: center;
+                        font-size: 40px;
+                        font-weight: bold;
+                    }
+                    h3{
+                        font-size: 20px;
+                        display: inline-block;
+                        text-align: left;
+                    }
+                    .img{
+                        margin-top: 20px;
+                    }
+                    .text{
+                        margin-top: 20px;
+                        text-align: left;
+                        line-height: 2rem;
+                        font-size: 14px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+/*万全の体制 end=========================*/
+
+
+/*金買取相場=========================*/
+.otkr-koto_gold{
+
+    .table-pc{
+        display: table;
+        @include mq() {
+            display: none;
+        }
+    }
+    .table-sp{
+        display: none;
+        @include mq() {
+            display: table;
+        }
+    }
+
+    
+    .lead{
+        max-width: 80%;
+        margin:0 auto;
+    }
+    .ratebox{
+        width: 100%;
+        table-layout: fixed;
+        tbody{
+            width: 100%;
+        }
+        th,td{
+            border:solid 1px #000;
+            padding: 6px 6px;
+            text-align: center;
+        }
+        // thead{
+            th{
+                font-weight: 700;
+                &.bg_gold{
+                    background-color: #fef886;
+                }
+                &.bg_platinum{
+                    background-color: #bee1f0;
+                }
+                &.bg_palladium{
+                    background-color: #ebebeb;
+                }
+                &.bg_silver{
+                    background-color: #a3d39c;
+                }
+            }
+        // }
+        // tbody{
+            .price{
+                font-size:1.2rem;
+                font-weight: 700;
+            }
+            .gap{
+                color:#c1272d;
+            }
+        // }
+    }
+    .campaign{
+        text-align: center;
+        padding:20px 0;
+        h4{
+            background-color: #e9d589;
+            border-radius: 30px;
+            max-width: 640px;
+            margin:0 auto;
+            font-size:18px;
+            padding:6px;
+            margin-bottom:1rem;
+        }
+    }
+    .rate-tables{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        .soba_btn{
+            // display: none;
+        }
+        @include mq() {
+            display: block;
+            height: 140px;
+            overflow: hidden;
+            position: relative;
+            padding:0 0 120px 0;
+            transition: all 0.3s;
+            &.open{
+                height: auto;
+                padding:0 0 80px 0;
+                &:after{
+                    content:none;
+                }
+            }
+            &:after{
+                content:"";
+                width: 100%;
+                height: 120px;
+                position: absolute;
+                bottom:0;
+                left: 0;
+                z-index: 2;
+                background:  linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,1));
+            }
+            .soba_btn{
+                display: block;
+                z-index: 3;
+                position: absolute;
+                bottom:0px;
+                left: 0;
+                padding:20px 0 0 0;
+                a{
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+        }
+        .rate-table-col{
+            width: calc(100% / 2);
+            @include mq() {
+                width: 100%;
+                &.col2{
+                    margin-top:-1px;
+                }
+            }
+        }
+        .rate-table{
+            width: 100%;
+            @include mq() {
+                table-layout: fixed;
+
+            }
+            th{
+                background-color: #cccccc;
+                border:solid 1px #000;
+                padding:6px;
+                width: 100px;
+                text-align: center;
+                font-weight: 400;
+                @include mq() {
+                    width: 60px;
+                    white-space: nowrap;
+                }
+            }
+            td{
+                padding:6px;
+                color:#707070;
+                font-weight: 700;
+                border:solid 1px #000;
+                text-align: center;
+                @include mq() {
+                    white-space: nowrap;
+                }
+            }
+            .up{
+                border-left: solid 2px #000;
+                background-color: #ecd9db;
+                @include mq() {
+                    width: 45%;
+                }
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                strong{
+                    font-size: 1.2rem;
+                    color:#820010;
+                    font-weight: 700;
+                    small{
+                        font-weight: 700;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+    .price-chart{
+        padding:0 20px;
+    }
+    .price-chart-container{
+
+    }
+    .price-chart .price-chart-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    //   font-size: 1rem;
+    @include mq() {
+        display: block;
+  }
+    }
+    .price-chart .price-chart-header .last_update{
+      display: none;
+    }
+    
+    .price-chart .price-chart-header select {
+    
+      /* styling */
+      background-color: white;
+      border: thin solid #988839;
+      border-radius: 4px;
+      display: inline-block;
+      font: inherit;
+      line-height: 1.5em;
+    //   padding: 0.5em 3.5em 0.5em 1em;
+    
+      /* reset */
+    
+      margin: 0;      
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      max-width: 400px;
+    //   @include mq() {
+    //       width: 200px;
+    //     //   font-size: 2rem;
+    // }
+    }
+    
+    
+    
+    
+    .price-chart .price-chart-header select {
+      background-image:
+        linear-gradient(45deg, transparent 50%, #988839 50%),
+        linear-gradient(135deg, #988839 50%, transparent 50%),
+        linear-gradient(to right, #988839, #988839);
+      background-position:
+        calc(100% - 20px) calc(1em + 1px),
+        calc(100% - 15px) calc(1em + 1px),
+        calc(100% - 2.5em) 0.5em;
+      background-size:
+        5px 5px,
+        6px 6px,
+        1px 1.5em;
+      background-repeat: no-repeat;
+    }
+    
+    .price-chart .price-chart-header select:focus {
+      background-image:
+        linear-gradient(45deg, #988839 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #988839 50%),
+        linear-gradient(to right, #988839, #988839);
+      background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.5em;
+      background-size:
+        5px 6px,
+        6px 6px,
+        1px 1.5em;
+      background-repeat: no-repeat;
+      border-color: #988839;
+      outline: 0;
+    }
+    
+    
+    .price-chart .price-chart-header select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+    
+
+
+    .gold_simulation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq() {
+            display: block;
+        }
+        .title{
+            display: block;
+            span{
+                display: inline-block;
+                background-color: #959595;
+                color:#fff;
+                padding:2px 10px;
+            }
+        }
+
+        .simulation_box{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            @include mq() {
+                justify-content: center;
+            }
+            #simulation_select{
+                border:solid 1px #000;
+                background-color: #fff;
+                border-radius: 0;
+                padding:6px;
+                font-size: 1.4rem;
+                @include mq() {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .symbol{
+            margin:0 10px;
+            .kakeru{
+                background-image: url("../img/icon_x.png");
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 6px;
+            }
+            .equal{
+                background-image: url("../img/icon_equal.png");
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 6px;
+            }
+        }
+        .inputbox{
+            position: relative;
+            padding-right: 1rem;
+            &.select_arrow{
+                padding-right: 0;
+            }
+            .boxstyle{
+                border:solid 1px #000;
+                background-color: #fff;
+                position: relative;
+                text-align: center;
+                padding:6px;
+                font-size: 1.4rem;
+                @include mq() {
+                    font-size: 0.8rem;
+                }
+            }
+            .unit{
+                position: absolute;
+                right: 0;
+                bottom:0;
+            }   
+        }
+        .under_box{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            @include mq() {
+                margin-top:10px;
+                justify-content: center;
+            }
+        }
+    }
+    .campaign-price{
+        max-width: 640px;
+        margin:10px auto;
+        h5{
+            background-color: #820010;
+            color:#fff;
+            text-align: center;
+            padding:6px;
+            @include mq() {
+                font-size: 0.8rem;
+            }
+        }
+        .unit{
+            text-align: center;
+            border:solid 1px #000;
+            padding:10px;
+            color:#959595;
+            font-size: 1.4rem;
+            @include mq() {
+                font-size: 0.8rem;
+            }
+            strong{
+                font-size: 1.8rem;
+                color:#820010;
+                font-weight: 700;
+                @include mq() {
+                    font-size: 1.0rem;
+                }
+            }
+        }
+    }
+}
+/*金買取相場 end=========================*/
+
+
+/*ブランド買取比較=========================*/
+.otkr-comparison{
+    &--title{
+        border:solid 1px #363636;
+        font-size: 28px;
+        line-height: 1.5;
+        text-align: center;
+        position: relative;
+        font-weight: 700;
+        @include mq() {
+            font-size: 20px;
+        }
+        &::before{
+            width:28px;
+            height: 28px;
+            content:"";
+            display: inline-block;
+            background-image: url("../img/icon_comparison.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 15px;
+            @include mq() {
+                width:20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &--block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:0px;
+        @include mq() {
+            // display: block;
+        }
+    }
+    &--image{
+        width: 40%;
+        text-align: center;
+        img{
+            max-width: 90%;
+            height: auto;
+        }
+        // @include mq() {
+        //     width: 100%;
+        // }
+    }
+    &--detail{
+        width: 60%;
+        // @include mq() {
+        //     width: 100%;
+        // }
+    }
+    .product-name{
+        font-size: 18px;
+        margin:1rem 0;
+        text-align: left;
+        @include mq() {
+            font-size: 13px;
+        }
+    }
+    .abprice-block{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin:0 0 1rem 0;
+        @include mq() {
+            flex-wrap: wrap;
+            gap:10px;
+
+        }
+        .abprice-item{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @include mq() {
+                width: 100%;
+            }
+            label{
+                display: inline-block;
+                background-color: #f5efe1;
+                font-size:18px;
+                line-height: 28px;
+                padding:0 0.5rem;
+                margin:0;
+                @include mq() {
+                    font-size: 13px;
+                }
+            }
+            .price{
+                padding:0 0.5rem;
+                font-size: 28px;
+                line-height: 1;
+                @include mq() {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .midashi{
+        text-align: center;
+        background-color: #efd9d9;
+        @include mq() {
+            font-size: 13px;
+        }
+    }
+    .priceresult{
+        color:#a90017;
+        text-align: center;
+        .icon{
+            width: 36px;
+            height: auto;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: 10px;
+            @include mq() {
+                width: 24px;
+            }
+        }
+        strong{
+            font-size: 56px;
+            line-height: 1;
+            @include mq() {
+                font-size: 32px;
+            }
+        }
+        small{
+            font-size: 36px;
+            line-height: 56px;
+            @include mq() {
+                font-size: 26px;
+                line-height: 32px;
+            }
+        }
+    }
+
+}
+
+
+/*ブランド買取比較 end=========================*/
+
+
+/*プラチナトータル査定=========================*/
+.otkr-totalsatei{
+    max-width: 900px;
+    margin:0 auto;
+    &--title{
+        border:solid 1px #363636;
+        font-size: 28px;
+        line-height: 1.5;
+        text-align: center;
+        position: relative;
+        font-weight: 700;
+        @include mq() {
+            font-size: 20px;
+        }
+    }
+
+    &--block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:0px;
+        @include mq() {
+            display: block;
+        }
+    }
+    &--image{
+        width: 40%;
+        text-align: center;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @include mq() {
+            width: 100%;
+        }
+    }
+    &--detail{
+        width: 60%;
+        @include mq() {
+            width: 100%;
+        }
+
+
+        .abprice-block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin:1rem 0 1rem 0;
+            @include mq() {
+                // flex-wrap: wrap;
+                // gap:10px;
+    
+            }
+            .abprice-item{
+                width: calc(50% - 10px);
+                // display: flex;
+                // align-items: center;
+                // justify-content: flex-start;
+                @include mq() {
+                    // width: 100%;
+                }
+                label{
+                    display: block;
+                    text-align: center;
+                    background-color: #636363;
+                    color:#fff;
+                    font-size:16px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    padding:0 0.5rem;
+                    margin:0;
+                    @include mq() {
+                        font-size: 13px;
+                    }
+                }
+                .price{
+                    text-align: center;
+                    padding:0.5rem 0.5rem;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 1;
+                    @include mq() {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &--board{
+        background-color: #ebe9e0;
+        padding:20px 40px;
+        @include mq() {
+            padding:10px 15px;
+        }
+
+        &Item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap:10px;
+            dl{
+                width: calc(50% - 10px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin:0;
+                &.red{
+                    color:#820010;
+                }
+                dt{
+                    font-size: 16px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    margin:0;
+                    @include mq() {
+                        font-size: 13px;
+                    }
+                }
+                dd{
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin:0;
+                    @include mq() {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        &Total{
+            margin-top:1rem;
+            text-align: right;
+            border-top:dashed 1px #000;
+            strong{
+                color:#820010;
+                font-size:30px;
+            }
+            @include mq() {
+                text-align: center;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+/*プラチナトータル査定 end=========================*/
+
+
+
+/*バナー=========================*/
+.otkr-cp_banner{
+    text-align: center;
+    .banner{
+        margin:0 auto;
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+/*バナー end=========================*/
+
+/*================================
+アコーディオン
+================================*/
+.otkr-accordion{
+    margin-bottom: 20px;
+    .accordion_header{
+        background-color: $colorLiteOrange;
+        padding: 10px 20px;
+        font-weight: bold;
+        line-height: 1;
+        position: relative;
+        @include mq() {
+            padding: 10px 40px 10px 40px;
+        }
+        &::after{
+            content: "";
+            transition: all 0.3s;
+            display: inline-block;
+            background-image: url("../img/ico_arrow_accordion_2.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: (46px/2);
+            height: (46px/2);
+            position: absolute;
+            top:50%;
+            right: 30px;
+            transform: translate(0, -50%);
+            @include mq() {
+                right: 10px;
+            }
+        }
+        &.open{
+            &::after{
+                background-image: url("../img/ico_arrow_accordion_1.png");
+            }
+        }
+        .icon--faq{
+            background-color: $colorBlack;
+            padding: 0 3px;
+            font-size: 16px;
+            color: $colorWhite;
+            font-weight: bold;
+            border-radius: 8px;
+            height: 24px;
+            width: 24px;
+            line-height: 24px;
+            display: inline-block;
+            text-align: center;
+            margin-right: 10px;
+            @include mq() {
+                position: absolute;
+                left:10px;
+                top:50%;
+                transform: translate(0,-50%);
+            }
+        }
+    }
+    .accordion_inner{
+        padding: 20px;
+        @include mq() {
+            padding: 20px 0;
+        }
+    }
+}
+
+
+
+
+/*================================
+table
+================================*/
+// グレー
+.table_bg--gray{
+    table{
+        width: 100%;
+        th{
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            &:nth-of-type(1) {
+                width: 60%;
+            }
+            &:nth-of-type(2) {
+                width: 20%;
+            }
+            &:nth-of-type(3) {
+                width: 20%;
+            }
+            @include mq() {
+                padding:5px;
+                &:nth-of-type(1) {
+                    width: 45%;
+                    white-space: nowrap;
+                }
+                &:nth-of-type(2) {
+                    width: 25%;
+                    white-space: nowrap;
+                }
+                &:nth-of-type(3) {
+                    width: 30%;
+                    white-space: nowrap;
+                }
+                 
+            }
+        }
+        td{
+            background-color: $colorLiteGray;
+            border-right: solid 10px $colorWhite;
+            border-bottom: solid 10px $colorWhite;
+            padding: 10px;
+            font-size: 16px;
+            @include mq() {
+                border-right: solid 4px $colorWhite;
+            }
+            strong{
+                // width: 39%;
+                display: block;
+                margin-right: 1em;
+            }
+            span{
+                font-size: 12px;
+                display: block;
+            }
+            &.table_text_red{
+                color: $colorRed;
+                border-right: none;
+                white-space: nowrap;
+                @include mq() {
+                    font-size: 3.2vw;
+                }
+            }
+            @include mq(lg) {
+                text-align: center;
+                strong{
+                    width: auto;
+                    display: block;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+            @include mq() {
+                padding:5px;
+                font-size: 3.0vw;
+                span{
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+}
+
+// 白
+.table_bg--White{
+    table{
+        width: 100%;
+        th{
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            border-bottom: 2px solid $colorBlack;
+            &:nth-of-type(1) {
+                width: 20%;
+            }
+            &:nth-of-type(2) {
+                width: 60%;
+            }
+            &:nth-of-type(3) {
+                width: 20%;
+            }
+            @include mq() {
+                font-size: 12px;
+                &:nth-of-type(1) {
+                    width: 20%;
+                }
+                &:nth-of-type(2) {
+                    width: 40%;
+                }
+                &:nth-of-type(3) {
+                    width: 40;
+                }
+                 
+            }
+        }
+        td{
+            border-bottom: dotted 1px $colorBlack;
+            padding: 10px;
+            font-size: 16px;
+            strong{
+                // width: 39%;
+                display: block;
+            }
+            span{
+                display: block;
+            }
+            &.table_img{
+                text-align: center;
+                img{
+                    width: 70px;
+                }
+            }
+            &.table_text_red{
+                color: $colorRed;
+                border-right: none;
+                font-size: 26px;
+                font-weight: bold;
+                text-align: center;
+                white-space: nowrap;
+                span{
+                    display: inline-block;
+                    font-size: 12px;
+                }
+            }
+            @include mq(lg) {
+                text-align: left;
+                font-size: 3vw;
+                padding: 8px;
+                strong{
+                    width: auto;
+                    display: block;
+                }
+                span{
+                    font-size: 12px;
+                }
+                &.table_text_red{
+                    font-size: 4vw;
+                    span{
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+/* /table end　=========================*/
+
+
+
+
+
+
+
+
+/*================================
+まずは査定額を聞いてみる　買取リンク
+================================*/
+
+.otkr-purchase{
+    padding: 50px 0;
+    &--btn{
+        ul{
+            max-width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            li{
+                width: 50%;
+                padding: 10px;
+                a{
+                    display: inline-block;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    &:hover{
+                        img{
+                            position: relative;
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        @include mq() {
+            ul{
+                max-width: 100%;
+                flex-direction: column;
+                li{
+                    width: 100%;
+                    padding:5px 10px;
+                    box-sizing: border-box;
+                    line-height: 0;
+                    a{
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+    &--telblock{
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include mq() {
+            display: block;
+            margin: 0 10px;
+        }
+        .otkr-purchase--tel{
+            position: relative;
+            width: 66%;
+            &::after{
+                content: "";
+                transition: all 0.3s;
+                display: inline-block;
+                background-image: url("../img/img_women.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                width: (208px/2);
+                height: (208px/2);
+                position: absolute;
+                top:50%;
+                right: 0;
+                transform: translate(0, -50%);
+            }
+            @include mq() {
+                width: auto;
+                margin-top: 10px;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        .otkr-purchase--check{
+            margin-left: auto;
+            h4{
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            ul{
+                li{
+                    position: relative;
+                    padding-left: 20px;
+                    font-size: 14px;
+                    &::before{
+                        content: "";
+                        transition: all 0.3s;
+                        display: inline-block;
+                        background-image: url("../img/ico_check.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: (30px/2);
+                        height: (30px/2);
+                        position: absolute;
+                        top:50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+            @include mq() {
+                margin-top: 30px;
+                position: relative;
+                ul{
+                    li{
+                        font-size: 3vw;
+                        margin-top: 10px;
+                    }
+                }
+                &::after{
+                    content: "";
+                    transition: all 0.3s;
+                    display: inline-block;
+                    background-image: url("../img/img_women.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: bottom center;
+                    width: (208px/2);
+                    width: 25vw;
+                    height: (208px/2);
+                    height: 25vw;
+                    position: absolute;
+                    top:50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+        .text_l{
+            font-size: 26px;
+            position: relative;
+            padding-right: 20px;
+            font-weight: bold;
+            display: inline-block;
+            &::after{
+                content: "";
+                transition: all 0.3s;
+                display: inline-block;
+                background-image: url("../img/ico_arrow_tel.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: (36px/2);
+                height: (30px/2);
+                position: absolute;
+                top:50%;
+                right: 0;
+                transform: translate(0, -50%);
+            }
+        }
+        .text_s{
+            font-size: 16px;
+            font-feature-settings: "palt";
+        }
+        .tel_link{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &Icon{
+                text-align: center;
+                width: 45px;
+                margin-right: 10px;
+                line-height: 0;
+                span{
+                    font-size: 9px;
+                    line-height: 1;
+                    margin-bottom: 2px;
+                    display: inline-block;
+                }
+            }
+            &Text{
+                font-weight: bold;
+                font-size: 52px;
+                line-height: 1;
+            }
+        }
+    }
+
+    .otkr-under-inner{
+        @include mq(){
+            padding: 0;
+            .tel_linkText{
+                padding:0 10px;
+                margin-bottom:5px;
+            }
+        }
+    }
+
+}
+
+/* /まずは査定額を聞いてみる　買取リンク　=========================*/
+
+
+
+//ダイヤモンド買取価格表
+
+.otkr-plicelist{
+    section{
+        padding:10px 0 !important;
+    }
+
+    #searchbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mq(){
+            display: block;
+        }
+    }
+    #searchbox {
+        margin-bottom: 1rem;
+    }
+    #searchbox p {
+        width: 224px;
+        padding-left: 38px;
+        position: relative;
+        background: url(../img/arrow_right.png) no-repeat scroll center left;
+        @include mq(){
+            background: none;
+            width: auto;
+            padding:0;
+            margin:0.5rem auto;
+        }
+    }
+    #searchbox p input {
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid #b7952a;
+        border-radius: 6px;
+        background: -webkit-linear-gradient(#dbb334, #c9a534);
+        background: linear-gradient(#dbb334, #c9a534);
+        display: block;
+        width: 100%;
+        height: 66px;
+        margin: 0;
+        position: relative;
+
+
+        @include mq(){
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(52, 108, 184);
+            border-radius: 5px;
+            background-image: -moz-linear-gradient( 90deg, rgb(67,124,202) 0%, rgb(89,144,221) 58%, rgb(110,164,239) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(67,124,202) 0%, rgb(89,144,221) 58%, rgb(110,164,239) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(67,124,202) 0%, rgb(89,144,221) 58%, rgb(110,164,239) 100%);
+            width: 80%;
+            height: 30px;
+            color: #FFF;
+            margin-bottom: 20px;
+            font-size: 11px;
+        }
+    }
+    #searchbox p:after {
+        content: '';
+        border-style: solid;
+        border-width: 0.8rem 0.5rem 0 0.5rem ;
+        border-color: #FFF transparent transparent transparent;
+        top: 50%;
+        margin-top: -0.3rem;
+        right: 10px;
+        position: absolute;
+    }
+
+
+    #tablelistbox .form {
+        width: 61%;
+        border-spacing: 3px;
+        margin: 3px -3px;
+        @include mq(){
+            margin:0;
+            border-spacing: 1px;
+            width:100%;
+        }
+
+    }
+    #tablelistbox .form,
+    #tablelistbox .form th,
+    #tablelistbox .form td {
+        border: none;
+        border-collapse: inherit;
+    }
+    #tablelistbox .form th {
+        background: #72a0de;
+        color: #FFF;
+        padding: 0;
+        width: auto;
+        font-size: 1rem;
+        font-weight: normal;
+        width: 30%;
+        text-align: center;
+        @include mq(){
+            font-size: 0.8rem;
+        }
+    }
+    #tablelistbox .form td {
+        padding: 0;
+    }
+    #tablelistbox .form td select {
+        width: 100%;
+        font-size: 1rem;
+        /*height: 40px;*/
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #ccc;
+        box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+        -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+        background: url("../img/bg_select.png") no-repeat scroll right center #fff;
+        background-size: 12px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.1rem 0.5rem;
+        @include mq(){
+            font-size: 0.8rem;
+        }
+
+    }
+
+    #tablelistbox h2 {
+        background-color: #437cca!important;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: #FFF;
+        padding: 0.5rem 1.5rem;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq(){
+            display: block;
+            font-size:1.0rem;
+            text-align: center;
+        }
+    }
+    #tablelistbox h2 .date {
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: right;
+        @include mq(){
+            font-size: 0.8rem;
+            font-weight: normal;
+            text-align: center;
+        }
+    }
+    #tablelistbox .inner {
+        overflow-y: scroll;
+        height: 196px;
+        padding: 4px 15px 15px;
+        box-sizing: border-box;
+        background: #f0f0f0;
+    }
+    #tablelistbox .inner h3 {
+        font-size: 1.1rem;
+        font-weight: normal;
+        margin: 5px 0 0;
+        border-left: 3px solid #437cca;
+        line-height: 1;
+        padding: 0.5rem 1rem;
+        @include mq(){
+            font-size: 0.9rem;
+            padding: 0rem 1rem;
+        }
+    }
+    #tablelistbox .inner table {
+        width: 100%;
+        margin: 0.2rem -3px 2.5rem;
+        @include mq(){
+            margin:0.2rem 0;
+        }
+    }
+    #tablelistbox .inner table th {
+        background: #72a0de;
+        color: #FFF;
+        padding: 0;
+        width: auto;
+        font-size: 1.0rem;
+        width: 30%;
+        text-align: center;
+        @include mq(){
+            font-size: 0.8rem;
+        }
+
+    }
+    #tablelistbox .inner table th.none {
+        width: 10%;
+        background: #a3a3a3;
+    }
+    #tablelistbox .inner table,
+    #tablelistbox .inner table th,
+    #tablelistbox .inner table td {
+        border: 0;
+        border-spacing: 3px;
+        border-collapse: inherit;
+        @include mq(){
+            border-spacing: 1px;
+        }
+
+    }
+    #tablelistbox .inner table td {
+        background: #FFF;
+        padding: 0;
+        text-align: center;
+        font-size: 1.0rem;
+        @include mq(){
+            font-size: 0.8rem;
+        }
+    }
+    #tablelistbox .inner table td:nth-child(1) {
+        background: #72a0de;
+        color: #FFF;
+        text-align: center;
+    }
+
+
+
+    .attentionbox{
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+
+    #pricelistframe {position:static !important;}#pricelistframe td {-webkit-transition:background-color 400ms ease;-moz-transition:background-color 400ms ease;-o-transition:background-color 400ms ease;transition:background-color 400ms ease;}#pricelistframe td.the-price {background-color:#ffbfbf !important;}#pricelistframe .hidden-loading {display:none !important;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================
+slick
+================================*/
+
+.otkr-slick--list{
+    position: relative;
+    &::before{
+        content: "";
+        display: inline-block;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), $colorWhite) !important;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translate(0, -50%);
+        z-index: 1;
+        @include mq() {
+            display: none;
+        }
+    }
+    &::after{
+        content: "";
+        display: inline-block;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), $colorWhite) !important;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        top:50%;
+        right: 0;
+        transform: translate(0, -50%);
+        z-index: 1;
+        @include mq() {
+            display: none;
+        }
+    }
+    
+    &Item{
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+        .cont{
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+        @include mq() {
+            padding: 10px;
+        }
+        a {
+            display: block;
+            width: 100%;
+        }
+        .text{
+            flex:1;
+            margin-top: 10px;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .img{
+            width: 100%;
+            img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+                height: auto;
+            }
+        }
+        .cate{
+            span{
+                font-size: 12px;
+                background-color: #f2d9dc;
+                display: inline-block;
+                padding: 3px 10px;
+                line-height: 1;
+    
+            }
+        }
+        .name{
+            font-size: 14px;
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            span{
+                display: block;
+            }
+        }
+        .purchase{
+            display: flex;
+            align-items: center;
+            position: relative;
+            &::before{
+                content: "買取 実績";
+                display: inline-block;
+                background-color: $colorRed;
+                width: 25px;
+                height: 25px;
+                font-size: 10px;
+                line-height: 1;
+                color: $colorWhite;
+                padding: 2px;
+                margin-right: 5px;
+                // position: absolute;
+                // top:50%;
+                // right: 0;
+                // transform: translate(0, -50%);
+            }
+            p{
+                font-size: 30px;
+                color: $colorRed;
+                font-weight: bold;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+
+
+    /*slick============*/
+    .slick-prev{
+        left: 80px;
+        top: 40%;
+    }
+    .slick-next{
+        right: 80px;
+        top: 40%;
+    }
+    .slick-track {
+        display: flex;
+    }
+    .slick-slide {
+        height: auto !important;
+        >div{
+            height: 100%;
+        }
+    }
+    @include mq() {
+        .slick-prev{
+            left: 0;
+        }
+        .slick-next{
+            right: 0;
+        }
+    }
+    /*slick============*/
+}
+
+
+
+
+
+/*================================
+アニメーション
+================================*/
+/*縦ライン*/
+.otkr-animation_line {
+	width: 100%;
+	height: 120px;
+	box-sizing: content-box;
+    margin: 50px auto;
+    @include mq() {
+        height: 70px;
+        margin: 30px auto 10px;
+    }
+}
+
+.lineanime {
+	width: 1px;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #c1272d;
+	animation: line 3s linear 0s infinite;
+    @include mq() {
+        height: 70px;
+        animation: lineSp 3s linear 0s infinite;
+    }
+}
+
+@keyframes line {
+	0% {
+		height: 0;
+	}
+	50% {
+		height: 120px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes lineSp {
+	0% {
+		height: 0;
+	}
+	50% {
+		height: 70px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+
+/*枠ライン*/
+
+.otkr-animation {
+	// width: 90%;
+    max-width: 1050px;
+	margin: 0 auto;
+	padding: 7rem 5% 10rem;
+    position: relative;
+    @include mq() {
+        padding: 7rem 0 10rem;
+        width: 90%;
+    }
+}
+
+.box01 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 2px solid #c1272d;
+	border-top: 2px solid #c1272d;
+    @include mq() {
+        border-left: 1px solid #c1272d;
+	    border-top: 1px solid #c1272d;
+    }
+}
+
+.box02 {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-right: 2px solid #c1272d;
+	border-top: 2px solid #c1272d;
+    @include mq() {
+        border-right: 1px solid #c1272d;
+	    border-top: 1px solid #c1272d;
+    }
+}
+
+.box03 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-right: 2px solid #c1272d;
+	border-bottom: 2px solid #c1272d;
+    @include mq() {
+        border-right: 1px solid #c1272d;
+	    border-bottom: 1px solid #c1272d;
+    }
+}
+
+.box04 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border-left: 2px solid #c1272d;
+	border-bottom: 2px solid #c1272d;
+    @include mq() {
+        border-left: 1px solid #c1272d;
+	    border-bottom: 1px solid #c1272d;
+    }
+}
+
+.boxeffect {
+	opacity: 0;
+	height: 500px;
+	width: 500px;
+	-webkit-transition: all 1.2s;
+	-moz-transition: all 1.2s;
+	-o-transition: all 1.2s;
+	-ms-transition: all 1.2s;
+	transition: all 1.2s;
+    @include mq() {
+        height: 250px;
+	    width: 250px;
+    }
+}
+
+.boxeffect-on {
+	opacity: 1;
+	height: 100px;
+	width: 100px;
+    @include mq() {
+        height: 50px;
+	    width: 50px;
+    }
+}
+
+
+
+.fadein {
+	opacity: 0;
+	margin-top: 10px;
+	-webkit-transition: all 1.2s;
+	-moz-transition: all 1.2s;
+	-o-transition: all 1.2s;
+	-ms-transition: all 1.2s;
+	transition: all 1.2s;
+}
+
+.fade-on {
+	opacity: 1;
+	margin-top: 0;
+}
+
+
+
+
+
+
+
+.otkr-document,
+.otkr-system,
+.otkr-model{
+    padding: 4rem 5% 5rem !important;
+    @include mq() {
+        padding: 3rem 0 4rem !important;
+    }
+}
+
+
+
+
+.table_bg--White tr{
+    opacity: 1;
+    transition: .3s;
+}
+.table_bg--White tr.is-hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    display: none;
+}
+
+
