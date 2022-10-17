@@ -502,7 +502,7 @@ layout
 
     .container-lp7 .zisseki-reason {
         height: auto;
-        top: 3rem;
+        top: 1.2rem;
     }
 
     .container-lp7 .zisseki-reason h2 {
@@ -527,7 +527,7 @@ layout
     }
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:460px) {
     .container-lp7 .zisseki-reason p {
         font-size: 3rem;
     }
@@ -575,16 +575,97 @@ layout
     display: inline-block;
     position: relative;
     background: #fff;
-    padding: .5rem;
     z-index: 1;
 }
 
 .container-lp7 .omakase-wrap .omakase-inner>figcaption {
     position: relative;
-    background: rgba(255, 255, 255, 0.5);
+    height: 30px;
+    background: rgba(206, 206, 206, 0.5);
     color: #B40000;
-    text-shadow: #fff;
-    font-size: 1.6rem;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    font-weight: 600;
+    font-size: .8rem;
     text-align: center;
+    padding: 4px 0;
     z-index: 2;
+}
+
+/* sanko-soba */
+.lp7rate-container {
+    margin: 0 auto;
+}
+
+.lp7rate-container .soba-ttl,
+.otkr-cmn-inner .soba-ttl {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.lp7rate-container .soba-ttl h2,
+.otkr-cmn-inner .soba-ttl h2 {
+    font-family: 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.lp7table {
+    width: 100%;
+    border: 1px solid #666;
+    table-layout: fixed;
+}
+
+.lp7table>caption {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    background: #666;
+    color: #fff;
+    padding: 2%;
+}
+
+.lp7table .lp7-ratetr>th {
+    border: solid 1px #000;
+    padding: 6px 6px;
+    text-align: center;
+    color: #fff;
+}
+
+.lp7table .lp7-ratetr>td {
+    border: solid 1px #000;
+    padding: 6px 6px;
+    text-align: center;
+    color: #000;
+}
+
+.lp7table .lp7-ratetr .price {
+    color: #000;
+}
+
+.lp7table .lp7-ratetr .gap {
+    color: #B40000;
+}
+
+
+.lp7table .lp7-ratetr>.bg_gold {
+    background: #AA0000;
+}
+
+.lp7table .lp7-ratetr>.bg_platinum {
+    background: #B19C69;
+}
+
+.lp7table .lp7-ratetr>.bg_palladium {
+    background: #B16969;
+}
+
+.lp7table .lp7-ratetr>.bg_silver {
+    background: #CF9C85;
+}
+
+@media screen and (max-width:768px) {
+    .lp7table .lp7-ratetr {
+        display: flex;
+    }
 }
