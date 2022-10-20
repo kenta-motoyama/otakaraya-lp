@@ -3,6 +3,105 @@
 /* ------------------------------
 header
 ------------------------------*/
+.otkr-nav-sp.lp7hdr {
+    position: relative;
+    background-image: url(../img/lp07/l7bg-otakaraya.png);
+    background-color: #780000;
+    background-size: cover;
+    width: 100vw;
+    z-index: -1;
+}
+
+.otkr-nav-sp.lp7hdr .lp7hdr--content {
+    position: relative;
+    justify-content: flex-end;
+    padding: 3px 0;
+}
+
+.lp7-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    width: 60% !important;
+    height: auto !important;
+    background: #fff !important;
+}
+
+.lp7-nav #otkr-nav-list {
+    background: #fff !important;
+    height: auto !important;
+}
+
+.lp7-nav .lp7-navlist {
+    position: relative !important;
+    max-width: 60% !important;
+    margin: 60px 0 0 0 !important;
+}
+
+.lp7hdr .lp7hdr--content .lp7-tell {
+    width: 50%;
+    position: absolute;
+    top: -4rem;
+    left: 0;
+}
+
+.lp7-nav .lp7-navlist li {
+    padding: 5px 0 !important;
+    line-height: 2 !important;
+}
+
+.lp7-nav .lp7-navlist .lp7-navlist--detail {
+    border-bottom: 1px solid #B40000 !important;
+    margin-left: 5px !important;
+}
+
+.lp7-nav .lp7-navlist li a {
+    color: #B40000 !important;
+    font-weight: bold !important;
+}
+
+.lp7-nav .lp7-navlist .lp7menu-ttl {
+    background: #B40000;
+    color: #fff;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.lp7-nav .lp7-navlist .lp7-close a {
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    background-color: #646464 !important;
+    color: #fff !important;
+}
+
+.lp7-nav .lp7-navlist .lp7-close a::after {
+    color: #fff !important;
+}
+
+.otkr-nav-sp.lp7hdr .lp7hdr--namewrap {
+    padding: 0 10px;
+}
+
+.otkr-nav-sp.lp7hdr .lp7hdr--namewrap .lp7hdr--logo {
+    display: inline-flex;
+}
+
+.otkr-nav-sp.lp7hdr .lp7-menu {
+    background-color: #fff;
+    margin-right: 5px;
+}
+
+.otkr-nav-sp.lp7hdr .lp7-menu span {
+    background-color: #780000;
+}
+
+.otkr-nav-sp.lp7hdr .lp7-menu .text::after {
+    color: #780000;
+}
+
 .otkr-cmn-inner.lp7 {
     width: 100%;
     position: relative;
@@ -45,6 +144,10 @@ header
 }
 
 @media screen and (max-width:768px) {
+    .otkr-nav-sp.lp7hdr .lp7hdr--logo img {
+        width: 200px;
+    }
+
     .otkr-cmn-inner .catch-wrap {
         display: block;
         position: absolute;
@@ -101,6 +204,11 @@ header
 }
 
 @media screen and (max-width:460px) {
+    .otkr-nav-sp.lp7hdr .lp7hdr--logo img {
+        width: 134px;
+        margin-left: 10px;
+    }
+
     .otkr-cmn-inner .catch-wrap {
         top: 40px;
         left: 10px;
@@ -145,20 +253,24 @@ a[href^="tel:"] {
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .container-lp7 {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .pc-only {
-        display: none;
-    }
-
-    .sp-only {
-        display: block;
-    }
+.container-lp7 {
+    margin: 0 auto;
 }
+
+.pc-only {
+    display: none;
+}
+
+.sp-only {
+    display: block;
+}
+
+.container-lp7--center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 
 /* ------------------------------
 layout
@@ -255,44 +367,57 @@ layout
 }
 
 /* kuchikomi */
-@media screen and (max-width:768px) {
-    .container-lp7.kuchikomi {
-        width: 100%;
-        position: relative;
-        z-index: 0;
-    }
+.container-lp7.kuchikomi {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
 
+.container-lp7.kuchikomi .kuchikomi-list {
+    width: 90%;
+    position: absolute;
+    top: 60%;
+    left: 28px;
+    display: block;
+    justify-content: center;
+}
+
+.container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail {
+    margin: .8rem auto;
+    background: #B40000;
+    padding: 1%;
+}
+
+.container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail .kuchikomi-list_txt {
+    background: #fff;
+    padding: 1%;
+}
+
+.container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail .kuchikomi-list_txt p {
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+@media screen and (min-width:960px) {
     .container-lp7.kuchikomi .kuchikomi-list {
-        width: 90%;
-        position: absolute;
+        width: 50%;
         top: 60%;
-        left: 28px;
-        display: block;
-        justify-content: center;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail {
-        margin: .8rem auto;
-        background: #B40000;
-        padding: 1%;
+        max-width: 690px;
     }
 
-    .container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail h2 {
-        color: #fff;
-        font-size: 1.4rem;
-        text-align: left;
-        font-weight: 600;
-    }
-
-    .container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail .kuchikomi-list_txt {
-        background: #fff;
-        padding: 1%;
-    }
-
-    .container-lp7.kuchikomi .kuchikomi-list .kuchikomi-list_detail .kuchikomi-list_txt p {
-        font-size: 1.15rem;
-        text-align: left;
-    }
 }
 
 @media screen and (max-width:460px) {
@@ -349,6 +474,7 @@ layout
 .container-lp7 .zisseki-wrap .zisseki-wrap_inner .zisseki-hikaku {
     display: flex;
     margin-left: 1rem;
+    text-align: left;
 }
 
 .container-lp7 .zisseki-wrap .zisseki-wrap_inner .zisseki-hikaku>dt {
@@ -476,10 +602,40 @@ layout
     color: #FF0000;
 }
 
+@media screen and (min-width:960px) {
+    .container-lp7 .zisseki-wrap {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .container-lp7 .zisseki-wrap .zisseki-wrap_inner::after {
+        top: 80%;
+    }
+
+
+    .container-lp7.pclayout.zisseki {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .container-lp7.pclayout.zisseki img {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .container-lp7 .zisseki-reason {
+        width: 50%;
+        margin-top: 5%;
+    }
+
+}
+
 @media screen and (max-width:460px) {
     .container-lp7 .zisseki-wrap .zisseki-wrap_inner {
         width: 60%;
         padding: 1%;
+        text-align: center;
     }
 
     .container-lp7 .zisseki-wrap .zisseki-wrap_inner p {
@@ -553,7 +709,7 @@ layout
 
 }
 
-@media screen and (min-width:767px) {
+@media screen and (min-width:960px) {
     .container-lp7 .gojitaku-inner p {
         top: 2rem;
         font-size: 2.4rem;
@@ -604,6 +760,14 @@ layout
     text-align: center;
     padding: 4px 0;
     z-index: 2;
+}
+
+@media screen and (min-width:960px) {
+    .container-lp7.omakase {
+        width: 50%;
+    }
+
+
 }
 
 /* sanko-soba */
@@ -790,6 +954,36 @@ layout
     margin: 0;
 }
 
+@media screen and (min-width:960px) {
+
+    .lp7table .bg_gold,
+    .rate-list .bg_gold {
+        padding: 2%;
+    }
+
+    .rate-list .bg_goldrate dl {
+        padding: 2%;
+    }
+
+    .lp7table .bg_platinum,
+    .rate-list .bg_platinum {
+        padding: 2%;
+    }
+
+    .rate-list .bg_platinumrate dl {
+        padding: 2%;
+    }
+
+    .lp7table .bg_silver,
+    .rate-list .bg_silver {
+        padding: 2%;
+    }
+
+    .rate-list .bg_silverrate dl {
+        padding: 2%;
+    }
+}
+
 /* rategraph */
 .form-control.lp7 {
     width: 40%;
@@ -797,6 +991,19 @@ layout
     border-radius: 5px;
     margin-left: 10px;
 }
+
+@media screen and (min-width:960px) {
+    .lp7-chart {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .lp7-graph {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
 
 /* simulation */
 .gold_simulation.lp7-ver {
@@ -1018,6 +1225,19 @@ layout
     padding: 1%;
 }
 
+@media screen and (min-width:960px) {
+    .gold_simulation.lp7-ver .simulation_box {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .gold_simulation.lp7-ver .under_box {
+        width: 50%;
+        margin: 30px auto;
+    }
+
+}
+
 /* qa */
 .container-lp7.qa {
     margin: auto;
@@ -1127,7 +1347,8 @@ layout
     background: url(../img/lp07/qa10.png)no-repeat;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:960px) {
+
     .container-lp7.qa .qa-wrap .qa-box>summary::after {
         top: 18px;
         left: 90%;
@@ -1141,11 +1362,15 @@ layout
     .container-lp7.qa .qa-wrap .qa-box .qa-inner_10 {
         padding: 2% 2% 2% 5rem;
     }
-}
 
-@media screen and (max-width:460px) {
-    .container-lp7.qa .qa-wrap .qa-box>summary {
-        font-size: .8rem;
+    .container-lp7.qa {
+        width: 80%;
+        margin: 0 auto 10px;
+        text-align: center;
+    }
+
+    .container-lp7.qa>img {
+        width: 30%;
     }
 
 }
@@ -1204,4 +1429,25 @@ layout
     content: '';
     background: url(../img/lp07/other_arrow.png)no-repeat;
     background-size: contain;
+}
+
+@media screen and (min-width:960px) {
+    .container-lp7.other {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container-lp7.other {
+        width: 80%;
+    }
+
+}
+
+/* ------------------------------
+footer
+------------------------------*/
+.otkr-footer.lp7-ftr {
+    background: url(../img/lp07/bg-ftrlp07.png)no-repeat center #820010 !important;
+    background-size: cover !important;
 }

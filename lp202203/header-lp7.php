@@ -232,10 +232,13 @@
             </div>
 
 
-            <div class="otkr-nav-sp">
-                <div class="otkr-header--content">
-                    <div class="otkr-header--sitename">
-                        <h1 class="f-notosans--r"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_otakaraya.png" alt="<?php echo $alt_add_word; ?> おたからや"></h1>
+            <div class="otkr-nav-sp lp7hdr">
+                <div class="otkr-header--content lp7hdr--content">
+                    <div class="otkr-header--sitename lp7hdr--namewrap">
+                        <h1 class="f-notosans--r lp7hdr--logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/l7logo-otakaraya.png" alt="<?php echo $alt_add_word; ?> おたからや">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/l7copy-otakaraya.png" alt="<?php echo $alt_add_word; ?> おたからや">
+                        </h1>
                     </div>
 
                     <div class="otkr-header--coupon">
@@ -249,7 +252,7 @@
 
                     <?php if (get_field('is_navi')) { ?>
 
-                        <div class="otkr-header--menu" id="ijMenu">
+                        <div class="otkr-header--menu lp7-menu" id="ijMenu">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -257,45 +260,19 @@
                         </div>
 
                     <?php } ?>
-
-                    <nav id="otkr-nav">
+                    <nav id="otkr-nav" class="lp7-nav">
                         <div id="otkr-nav-list">
-                            <div class="menutext">
-                                <p>メニュー</p>
-                            </div>
-                            <ul class="otkr-nav-list-ul">
-                                <li class="otkr-nav-purchase">
-                                    <ul>
-                                        <li><a href="<?php echo $visiting_link; ?>" class="ico_car">出張予約</a></li>
-                                        <li><a href="<?php echo $tento_link ?>" class="ico_shop">店舗一覧</a></li>
-                                    </ul>
-                                </li>
-                                <li class="otkr-menu">
-                                    <ul>
-                                        <li><a href="#otkr_lp">トップ</a></li>
-                                        <?php
-                                        foreach ($lp_layout as $key => $value) {
-                                            if ($value['lp_layout_name']) {
-                                                echo '<li><a href="#' . $value['lp_layout_anc'] . '">' . $value['lp_layout_name'] . '</a></li>';
-                                            }
-                                            if ($value['lp_layout_name2']) {
-                                                echo '<li><a href="#' . $value['lp_layout_anc2'] . '">' . $value['lp_layout_name2'] . '</a></li>';
-                                            }
-                                        }
-                                        ?>
-
-                                        <!-- <li><a href="#">金相場高騰</a></li>
-                      <li><a href="#" class="">買取実績</a></li>
-                      <li><a href="#" class="">まとめて査定で金額10%up</a></li>
-                      <li><a href="#" class="">どんな状態でもお買取</a></li>
-                      <li><a href="#" class="">Liメディア情報ve</a></li>
-                      <li><a href="#" class="">万全の体制</a></li>
-                      <li><a href="#" class="">売却時に必要なもの</a></li>
-                      <li><a href="#" class="">よくある質問</a></li> -->
-                                    </ul>
-                                </li>
-                                <li class="otkr-close"><a href="#">とじる</a></li>
-
+                            <ul class="otkr-nav-list-ul lp7-navlist">
+                                <li class="lp7-tell"><a href="tel:0120-555-600"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/icon-lp7nav-tell.png" alt="まずは相談してみる"></a></li>
+                                <li class="lp7menu-ttl">メニュー</li>
+                                <li class="lp7-navlist--detail"><a href="#">TOP</a></li>
+                                <li class="lp7-navlist--detail"><a href="#">店舗案内</a></li>
+                                <li class="lp7-navlist--detail"><a href="#" class="">キャンペーン</a></li>
+                                <li class="lp7-navlist--detail"><a href="#" class="">高価買取実績</a></li>
+                                <li class="lp7-navlist--detail"><a href="#" class="">その他買取品目</a></li>
+                                <li class="lp7-navlist--detail"><a href="#" class="">よくあるご質問</a></li>
+                                <li class="lp7-navlist--detail"><a href="#" class="">お客さまの声</a></li>
+                                <li class="otkr-close lp7-close"><a href="#">閉じる</a></li>
                             </ul>
                         </div>
                     </nav>

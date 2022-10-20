@@ -4,7 +4,7 @@ $price_highest_gap_use = get_field('price_highest_gap_use', 'option');
 ?>
 
 <section>
-    <div class="container-lp7">
+    <div class="container-lp7--center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/ttl-sankokaitori.png" alt="金プラチナの買取参考相場">
     </div>
 
@@ -19,9 +19,9 @@ $price_highest_gap_use = get_field('price_highest_gap_use', 'option');
             <!-- 金レート・プラチナレート -->
             <div id="ratebox">
                 <table class="lp7table table-pc">
+                    <caption><span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span></caption>
                     <thead>
                         <tr>
-                            <th class="caption" colspan="3"><span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span></th>
                             <th class="bg_gold">金の国内公表価格</th>
                             <th class="bg_platinum">プラチナの国内公表価格</th>
                             <th class="bg_palladium">バラジウムの国内公表価格</th>
@@ -307,7 +307,7 @@ $price_highest_gap_use = get_field('price_highest_gap_use', 'option');
 
             <div class="price-chart-container">
 
-                <div class="price-chart-header">
+                <div class="price-chart-header lp7-chart">
                     <select id="graph-select" class="form-control lp7">
                         <option value="">選択してください</option>
                         <optgroup label="金">
@@ -342,8 +342,9 @@ $price_highest_gap_use = get_field('price_highest_gap_use', 'option');
                     <p id="price-chart-legend" class='chart-legend' style='text-align:right; margin: 20px 0 0 0;'>相場価格(円/g)</p>
                     <p id="price-chart-last-update" class='last_update' style='text-align:right; margin: 20px 0 0 0;'>更新</p>
                 </div>
-
-                <canvas id="" class="price-chart-canvas" width="735" height="400"></canvas>
+                <div class="lp7-graph">
+                    <canvas id="" class="price-chart-canvas" width="735" height="400"></canvas>
+                </div>
                 <!-- <small>※上記の金額は、形状によって異なりますので詳しくはお電話でお問い合わせください。</small> -->
 
             </div>

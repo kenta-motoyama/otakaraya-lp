@@ -42,14 +42,14 @@ get_header('lp7');
       </div>
     </section>
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7--center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/bnr-souba.webp" alt="相場が下がってしまう">
       </div>
     </section>
     <!-- 店舗へ誘導 -->
     <?php include("include/lp07_cta.php") ?>
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7--center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/bnr-erabareruriyu.webp" alt="選ばれる5つの理由">
       </div>
     </section>
@@ -96,12 +96,12 @@ get_header('lp7');
     <?php endforeach ?>
     <!-- 貴金属買取実績 -->
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7--center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/ttl-kaitorizisseki.png" alt="貴金属買取実績">
       </div>
     </section>
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7 pclayout zisseki">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_point1.png" alt="他社圧倒の買取実績">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki-item01.png" alt="買取アイテム1">
         <div class="zisseki-wrap">
@@ -126,7 +126,7 @@ get_header('lp7');
           <p>0,000,000<span class="zisseki-yen">円</span></p>
         </div>
       </div>
-      <div class="container-lp7 jisseki">
+      <div class="container-lp7 pclayout zisseki">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_point2.png" alt="1品でも高価買取">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki-item02.png" alt="買取アイテム1">
         <div class="zisseki-wrap">
@@ -155,12 +155,12 @@ get_header('lp7');
     <!-- この様な物、ご自宅に眠らせていませんか -->
     <?php include("include/lp_07gojitaku.php") ?>
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7--center">
         <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/zisseki_btn.webp" alt="詳しく見る"></a>
       </div>
     </section>
     <section>
-      <div class="container-lp7">
+      <div class="container-lp7--center">
         <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/lp07/bnr-nayami.webp" alt="悩んでいませんか"></a>
       </div>
     </section>
@@ -182,4 +182,4 @@ get_header('lp7');
 
   </article>
 </main>
-<?php get_footer(); ?>
+<?php get_footer('lp7'); ?>
