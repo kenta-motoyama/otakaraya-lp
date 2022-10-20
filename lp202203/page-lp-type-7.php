@@ -171,12 +171,10 @@ get_header('lp7');
     <?php include("include/lp07_cta.php") ?>
     <!-- 参考買取相場 -->
     <?php include("include/lp07_gold.php") ?>
-    <!-- 見本 -->
-    <?php include("include/koto_gold.php") ?>
     <!-- よくあるご質問 -->
     <?php include("include/lp07_qa.php") ?>
     <!-- その他買い取り品目 -->
-
+    <?php include("include/lp07_other.php") ?>
     <!-- 店舗へ誘導 -->
     <?php include("include/lp07_cta.php") ?>
 

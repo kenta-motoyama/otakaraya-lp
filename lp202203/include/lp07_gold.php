@@ -1,5 +1,6 @@
 <?php
 global $alt_add_word;
+$price_highest_gap_use = get_field('price_highest_gap_use', 'option');
 ?>
 
 <section>
@@ -18,9 +19,9 @@ global $alt_add_word;
             <!-- 金レート・プラチナレート -->
             <div id="ratebox">
                 <table class="lp7table table-pc">
-                    <caption><span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span></caption>
                     <thead>
                         <tr>
+                            <th class="caption" colspan="3"><span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span></th>
                             <th class="bg_gold">金の国内公表価格</th>
                             <th class="bg_platinum">プラチナの国内公表価格</th>
                             <th class="bg_palladium">バラジウムの国内公表価格</th>
@@ -45,38 +46,143 @@ global $alt_add_word;
                     </tbody>
                 </table>
                 <table class="lp7table table-sp" v-cloak>
-                    <caption><span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span></caption>
+                    <tr class="caption" colspan="3">
+                        <th class="caption" colspan="3">
+                            <span class="caption-gold">金・貴金属国内公表価格</span><span class="caption-date">{{price_date | ad_format}}{{price_hhmm}}更新</span>
+                        </th>
+                    </tr>
                     <tr class="lp7-ratetr">
-                        <th class="bg_gold" width="30%">金の国内公表価格</th>
-                        <td class="price" width="40%">{{au_ingod_price}}円</td>
+                        <th class="bg_gold" width="40%">金の国内公表価格</th>
+                        <td class="price" width="30%">{{au_ingod_price}}円</td>
                         <?php if ($price_highest_gap_use) : ?>
                             <td class="gap" width="30%">{{au_ingod_diff | diff_format}}円</td>
                         <?php endif; ?>
                     </tr>
-                    <tr class="lp7-soubatr">
-                        <th class="bg_platinum">プラチナの国内公表価格</th>
-                        <td class="price">{{pt_ingod_price}}円</td>
+                    <tr class="lp7-ratetr">
+                        <th class="bg_platinum" width="40%">プラチナの国内公表価格</th>
+                        <td class="price" width="30%">{{pt_ingod_price}}円</td>
                         <?php if ($price_highest_gap_use) : ?>
-                            <td class="gap">{{pd_ingod_diff | diff_format}}円</td>
+                            <td class="gap" width="30%">{{pd_ingod_diff | diff_format}}円</td>
                         <?php endif; ?>
                     </tr>
-                    <tr class="lp7-soubatr">
-                        <th class="bg_palladium">バラジウムの国内公表価格</th>
-                        <td class="price">{{pd_ingod_price}}円</td>
+                    <tr class="lp7-ratetr">
+                        <th class="bg_palladium" width="40%">バラジウムの国内公表価格</th>
+                        <td class="price" width="30%">{{pd_ingod_price}}円</td>
                         <?php if ($price_highest_gap_use) : ?>
-                            <td class="gap">{{pt_ingod_diff | diff_format}}円</td>
+                            <td class="gap" width="30%">{{pt_ingod_diff | diff_format}}円</td>
                         <?php endif; ?>
                     </tr>
-                    <tr class="lp7-soubatr">
-                        <th class="bg_silver">シルバーの国内公表価格</th>
-                        <td class="price">{{ag_ingod_diff | diff_format}}円</td>
+                    <tr class="lp7-ratetr">
+                        <th class="bg_silver" width="40%">シルバーの国内公表価格</th>
+                        <td class="price" width="30%">{{ag_ingod_price}}円</td>
                         <?php if ($price_highest_gap_use) : ?>
-                            <td class="gap">{{ag_ingod_price}}円</td>
+                            <td class="gap" width="30%">{{ag_ingod_diff | diff_format}}円</td>
                         <?php endif; ?>
                     </tr>
                 </table>
             </div>
         </div>
+        <!-- 金貴金属の種別参考買取相場表 -->
+        <div class="container-lp7">
+            <div class="otkr-cmn-inner">
+                <div class="soba-ttl">
+                    <h2>金貴金属の種別参考買取相場表</h2>
+                </div>
+                <div class="rate-list">
+                    <details class="bg_goldrate">
+                        <summary class="bg_gold">金のレート（1gあたり）</summary>
+                        <dl>
+                            <dt>インゴット（金）</dt>
+                            <dd>8,643円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K24</dt>
+                            <dd>8,636円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K22</dt>
+                            <dd>7,919円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K21.6</dt>
+                            <dd>7,775円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K20</dt>
+                            <dd>7,236円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K18</dt>
+                            <dd>6,652円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K14</dt>
+                            <dd>4,944円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K10</dt>
+                            <dd>3,500円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K9</dt>
+                            <dd>3,086円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K18WG</dt>
+                            <dd>6,901円</dd>
+                        </dl>
+                        <dl>
+                            <dt>K14WG</dt>
+                            <dd>5,106円</dd>
+                        </dl>
+                    </details>
+                    <details class="bg_platinumrate">
+                        <summary class="bg_platinum">プラチナのレート（1gあたり）</summary>
+                        <dl>
+                            <dt>インゴット（プラチナ）</dt>
+                            <dd>4,700円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Pt1000</dt>
+                            <dd>4,650円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Pt950</dt>
+                            <dd>4,410円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Pt900</dt>
+                            <dd>4,285円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Pt850</dt>
+                            <dd>4,043円</dd>
+                        </dl>
+                    </details>
+                    <details class="bg_silverrate">
+                        <summary class="bg_silver">シルバーのレート（1gあたり）</summary>
+                        <dl>
+                            <dt>インゴット（シルバー）</dt>
+                            <dd>93円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Sv1000</dt>
+                            <dd>90円</dd>
+                        </dl>
+                        <dl>
+                            <dt>Sv925</dt>
+                            <dd>81円</dd>
+                        </dl>
+                    </details>
+                </div>
+                <p style="text-align: left;">※各種別毎の金相場、プラチナ相場、シルバー相場です。</p>
+                <p style="text-align: left;">※上記の金額は、形状によって異なりますので、詳しくはお電話でお問合わせください。</p>
+            </div>
+        </div>
+
+
+
+
         <!-- 貴金属種別レート表 -->
         <div class="otkr-cmn-inner" style="display:none;">
 
@@ -193,17 +299,16 @@ global $alt_add_word;
     if ($price_graph_option_use) :
 
     ?>
-        <section class="price-chart lp7soba-container">
+        <section class="price-chart">
 
             <div class="soba-ttl">
-                <h2>推移グラフ</h2>
-                <p>過去2ヶ月の金買取価格相場</p>
+                <h2>金・貴金属の過去2ヶ月の<br class="sp-only">参考買取価格相場推移グラフ</h2>
             </div>
 
             <div class="price-chart-container">
 
                 <div class="price-chart-header">
-                    <select id="graph-select" class="form-control">
+                    <select id="graph-select" class="form-control lp7">
                         <option value="">選択してください</option>
                         <optgroup label="金">
                             <option value="k24_ingot">インゴット（金）</option>
@@ -254,21 +359,17 @@ global $alt_add_word;
     <?php endif; ?>
 
 
-
-
-
     <div id="simulation">
 
-        <div class="otkr-ttl">
-            <h2>計算ツール</h2>
-            <p>お手持ちの金の参考価格は？</p>
+        <div class="soba-ttl">
+            <h2>金・プラチナ<br class="sp-only">買取シミュレーション</h2>
         </div>
 
-        <div class="gold_simulation" id="price">
+        <div class="gold_simulation lp7-ver" id="price">
             <div class="simulation_box">
                 <div class="inputbox select_arrow">
-                    <p class="title"><span>金の品位</span></p>
-                    <select id="simulation_select">
+                    <p>品位</p>
+                    <select id="simulation_select" class="lp7-select">
                         <option value="" selected="selected">種類を選んで下さい</option>
                         <option v-bind:value="au_ingod_price">インゴット（金）</option>
                         <option v-bind:value="au_scrap[0].price">K24</option>
@@ -288,10 +389,8 @@ global $alt_add_word;
                         <option v-bind:value="pt_scrap[3].price">Pt850</option>
                     </select>
                 </div>
-                <div class="symbol">
-                    <p class="kakeru"></p>
-                </div>
-                <div class="inputbox weight">
+                <div class="lp7-simulationarrow"><span></span></div>
+                <div class="inputbox weight lp7-weight">
                     <p class="title"><span>重さ</span></p>
                     <input type="number" id="weight" min="0" max="100000" placeholder="0" class="boxstyle">
                     <p class="unit">g</p>
@@ -302,17 +401,13 @@ global $alt_add_word;
                     <p class="equal"></p>
                 </div>
                 <div class="inputbox finalprice">
-                    <p class="title"><span>金・貴金属参考買取価格</span></p>
+                    <p class="title"><span>参考買取相場価格</span></p>
                     <input type="text" id="answer" readonly="readonly" class="boxstyle">
                     <p class="unit">円</p>
                 </div>
             </div>
         </div>
-        <div class="campaign-price">
-            <!-- <h5>「おたからや」なら1gあたり<?php the_field('price_highest_upprice'); ?>円UP中!</h5> -->
-            <p class="unit">キャンペーン価格なら<strong id="answer_cp"></strong>円！</p>
-        </div>
-        <p style="text-align:center;line-height:1.1;font-size:10px;"><small>※上記の金額は実際の買取金額を保証するものではありません。</small></p>
+        <p class="detail-call">※上記の金額は、形状によって異なりますので、詳しくはお電話でお問合せください。</p>
 
 
         <!-- <small>※上記の金額は、形状によって異なりますので詳しくはお電話でお問い合わせください。</small> -->
@@ -435,16 +530,4 @@ global $alt_add_word;
             });
         });
     </script>
-
-
-
-    <?php if (get_field('price_highest_is_cv')) { ?>
-        <?php require get_template_directory() . '/include/parts/cv.php'; ?>
-    <?php } ?>
-
-
 </section>
-
-<div class="otkr-animation_line">
-    <div class="lineanime"></div>
-</div>
